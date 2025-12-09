@@ -1,0 +1,215 @@
+.login-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 50%, #1a365d 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.login-image-section {
+  flex: 1.5;
+  background: #f0f2f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 50px;
+  background: white;
+}
+
+.login-form-content {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-brand,
+.cinescope-title {
+  font-family: 'Rubik Bubbles', 'Fredoka One', 'Bungee', cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  transform: perspective(500px) rotateX(5deg);
+  text-shadow: 
+    0 2px 0 rgba(44, 82, 130, 0.3),
+    0 4px 8px rgba(30, 58, 95, 0.2),
+    0 8px 16px rgba(30, 58, 95, 0.1);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.login-brand::before {
+  content: 'CineScope';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, rgba(44, 82, 130, 0.1) 0%, rgba(30, 58, 95, 0.1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: translate(2px, 2px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.login-brand::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(30, 58, 95, 0.3);
+}
+
+.login-title {
+  margin-bottom: 8px !important;
+  color: #1a365d;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  display: block;
+  margin-bottom: 32px;
+  color: #718096;
+  font-size: 14px;
+}
+
+.login-form {
+  margin-top: 24px;
+}
+
+.login-form .ant-form-item-label > label {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.login-button {
+  margin-top: 8px;
+  height: 44px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #2c5282 0%, #1e3a5f 100%);
+  border: none;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+}
+
+.forgot-password-link {
+  margin-bottom: 8px !important;
+  margin-top: -8px;
+}
+
+.forgot-password-link .ant-form-item-control {
+  text-align: right;
+}
+
+.link-text {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.link-text:hover {
+  color: #1e3a5f;
+  text-decoration: underline;
+}
+
+.signup-link-container {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.signup-link-text {
+  color: #718096;
+  font-size: 14px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.login-link {
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.login-link:hover {
+  color: #1e3a5f;
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .login-image-section {
+    min-height: 200px;
+    padding: 20px;
+  }
+
+  .login-form-section {
+    padding: 40px 30px;
+  }
+
+  .login-brand {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    transform: perspective(400px) rotateX(3deg);
+  }
+}
+
